@@ -18,12 +18,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SignInPage(),
+      home: SplashScreenPages(),
       debugShowCheckedModeBanner: false,
       routes: {
         '/home' : (context) =>  HomePage(),
         '/sign-in' : (context) =>  SignInPage(),
         '/sign-up' : (context) =>  SignUpPage(),
+        '/main' : (context) =>  MainPage(),
       },
     );
   }
