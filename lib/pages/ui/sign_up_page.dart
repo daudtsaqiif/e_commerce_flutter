@@ -33,7 +33,7 @@ class SignUpPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: const EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 10),
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -45,7 +45,7 @@ class SignUpPage extends StatelessWidget {
               Navigator.pushNamed(context, '/main');
             },
             child: Text(
-              'Sign In',
+              'Sign Up',
               style: primaryTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
@@ -59,7 +59,7 @@ class SignUpPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -109,7 +109,7 @@ class SignUpPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -158,7 +158,7 @@ class SignUpPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -207,7 +207,7 @@ class SignUpPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        margin: EdgeInsets.only(top: 70),
+        margin: EdgeInsets.only(top: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

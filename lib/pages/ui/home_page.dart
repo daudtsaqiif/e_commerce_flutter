@@ -5,11 +5,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    Widget header() {
+      return Container(
+        child: Text('nama ku bentol', style: primaryTextStyle,),
+      );
+    }
+
     return Scaffold(
-      backgroundColor: primaryColor,
-      body: Center(
-        child: Image.asset('assets/mu.png'),
-      ),
-    );
+        backgroundColor: backgroundColor1,
+        body: ListView(
+          children: [
+            header()
+          ],
+        ));
   }
 }
