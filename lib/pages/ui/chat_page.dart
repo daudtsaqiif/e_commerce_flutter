@@ -5,10 +5,33 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget massage() {
+      return Column(children: [
+        ChatCard(),
+        ChatCard(),
+        ChatCard(),
+      ]);
+    }
+
+    Widget header() {
+      return AppBar(
+        backgroundColor: backgroundColor2,
+        centerTitle: true,
+        title: Text(
+          'Massage Support',
+          style: primaryTextStyle.copyWith(fontWeight: FontWeight.w200),
+        ),
+        automaticallyImplyLeading: false,
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor1,
-      body: Center(
-        child: Text('chat page', style: primaryTextStyle,),
+      body: ListView(
+        children: [
+          header(),
+          massage(),
+        ],
       ),
     );
   }

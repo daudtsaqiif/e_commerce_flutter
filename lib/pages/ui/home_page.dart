@@ -13,6 +13,9 @@ class HomePage extends StatelessWidget {
             ProductTitle(),
             ProductTitle(),
             ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
           ],
         ),
       );
