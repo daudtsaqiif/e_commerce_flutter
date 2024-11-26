@@ -5,8 +5,21 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget massageEmpty() {
+      return Center(
+        child: Text(
+          'Massage Empty',
+          style: primaryTextStyle,
+        ),
+      );
+    }
+
     Widget massage() {
       return Column(children: [
+        ChatCard(),
+        ChatCard(),
+        ChatCard(),
+        ChatCard(),
         ChatCard(),
         ChatCard(),
         ChatCard(),
@@ -30,7 +43,8 @@ class ChatPage extends StatelessWidget {
       body: ListView(
         children: [
           header(),
-          massage(),
+          // massage(),
+          massageEmpty(),
         ],
       ),
     );
