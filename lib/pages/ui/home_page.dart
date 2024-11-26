@@ -5,6 +5,31 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget newArrivalProduct() {
+      return Container(
+        margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+        child: Column(
+          children: [
+            ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
+          ],
+        ),
+      );
+    }
+
+    Widget newArrivalTitle() {
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: defaultMargin,
+        ),
+        child: Text(
+          'New Arrival',
+          style: primaryTextStyle.copyWith(fontSize: 22, fontWeight: semiBold),
+        ),
+      );
+    }
+
     Widget popularProduct() {
       return Container(
         margin: EdgeInsets.symmetric(horizontal: defaultMargin),
@@ -154,12 +179,16 @@ class HomePage extends StatelessWidget {
         body: ListView(
           children: [
             header(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             category(),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             popularProductTitle(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             popularProduct(),
+            const SizedBox(height: 15),
+            newArrivalTitle(),
+            const SizedBox(height: 10),
+            newArrivalProduct(),
           ],
         ));
   }
