@@ -35,6 +35,7 @@ class ChatPage extends StatelessWidget {
           style: primaryTextStyle.copyWith(fontWeight: FontWeight.w200),
         ),
         automaticallyImplyLeading: false,
+        
       );
     }
 
@@ -43,8 +44,7 @@ class ChatPage extends StatelessWidget {
       body: ListView(
         children: [
           header(),
-          // massage(),
-          massageEmpty(),
+          massage(),
         ],
       ),
     );
