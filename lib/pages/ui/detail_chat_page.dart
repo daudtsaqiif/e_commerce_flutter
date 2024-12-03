@@ -5,6 +5,18 @@ class DetailChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget content() {
+      return ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        children: [
+          ChatBubble(),
+          ChatBubble(),
+          ChatBubble(),
+          ChatBubble(),
+        ],
+      );
+    }
+
     Widget productPreview() {
       return Container(
         width: 230,
@@ -19,6 +31,7 @@ class DetailChatPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
@@ -29,22 +42,31 @@ class DetailChatPage extends StatelessWidget {
                 ),
                 SizedBox(width: 10),
                 Expanded(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Shoes Arei V.2.0 - Black',
-                      style: primaryTextStyle,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    Text(
-                      NumberFormat.currency(
-                              locale: 'id-ID', decimalDigits: 0, symbol: 'IDR')
-                          .format(750000),
-                      style: priceTextStyle.copyWith(color: Colors.white),
-                    ),
-                  ],
-                ))
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Shoes Arei V.2.0 - Black',
+                        style: primaryTextStyle,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                      ),
+                      Text(
+                        NumberFormat.currency(
+                                locale: 'id-ID',
+                                decimalDigits: 0,
+                                symbol: 'IDR')
+                            .format(750000),
+                        style: priceTextStyle.copyWith(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10),
+                Image.asset(
+                  'assets/button_close.png',
+                  width: 22,
+                ),
               ],
             ),
           ],
@@ -140,6 +162,7 @@ class DetailChatPage extends StatelessWidget {
       backgroundColor: backgroundColor3,
       appBar: header(),
       bottomNavigationBar: chatInput(),
+      body: content(),
     );
   }
 }
