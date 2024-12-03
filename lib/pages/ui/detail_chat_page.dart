@@ -9,10 +9,32 @@ class DetailChatPage extends StatelessWidget {
       return ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         children: [
-          ChatBubble(),
-          ChatBubble(),
-          ChatBubble(),
-          ChatBubble(),
+          ChatBubble(
+            text: 'Hi, This item is still available?',
+            isSender: true,
+            hasProduct: true,
+          ),
+          ChatBubble(
+            text: 'Yes, This item is still available',
+            isSender: false,
+            hasProduct: false,
+          ),
+          ChatBubble(
+            text: 'How about the size?',
+            isSender: true,
+          ),
+          ChatBubble(
+            text: 'It\'s available in 42 and 43',
+            isSender: false,
+          ),
+          ChatBubble(
+            text: 'Oke, I will take 42',
+            isSender: true,
+          ),
+          ChatBubble(
+            text: 'Sure, please wait a moment',
+            isSender: false,
+          ),
         ],
       );
     }
