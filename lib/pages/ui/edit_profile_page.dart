@@ -6,8 +6,22 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget content() {
-      return Column(
-        children: [],
+      return Container(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Padding(padding: EdgeInsets.all(8)),
+            const CircleAvatar(
+              radius: 64,
+              backgroundImage: AssetImage('assets/image_shoes.png'),
+            ),
+            Text(
+              'Daud Tsaqiif Rahmadsyah',
+              style: primaryTextStyle,
+            )
+          ],
+        ),
       );
     }
 
