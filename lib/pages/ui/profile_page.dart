@@ -5,11 +5,10 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor1,
-      body: Center(
-        child: Text('profile page', style: primaryTextStyle,),
-      ),
+    return Column(
+      children: [
+        
+      ],
     );
   }
 }
