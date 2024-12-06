@@ -38,6 +38,52 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                children: [
+                  const CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('assets/image_profile.png'),
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Daud Tsaqiif',
+                          style: primaryTextStyle.copyWith(
+                            fontSize: 20,
+                            fontWeight: semiBold,
+                          ),
+                        ),
+                        Text(
+                          'daudtsaqiif49@gmail.com',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 16,
+                            fontWeight: regular,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const Icon(
+                      Icons.exit_to_app,
+                      color: Colors.red,
+                      size: 30,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Divider(
+                thickness: 1,
+                color: primaryTextColor,
+              ),
+              const SizedBox(height: 10),
               Text(
                 'Account',
                 style: primaryTextStyle.copyWith(
